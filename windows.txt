@@ -1,0 +1,29 @@
+Instalar GUEST ADDITIONS LINUX
+Abrimos el CD y picamos en autorun.sh y le damos la clave del sudo y luego 
+reiniciamos el sistema
+
+Nos movemos a donde está montado el cd
+cd /media/cdrom
+damos ls para ver si esta el archivo 
+VBoxLinuxAdditions.run
+luego sudo y damos la clave, luego
+bash VBoxLinuxAdditions.run
+
+si este falla entonces instalamos:
+apt-get install build-essential linux-headers-amd64
+
+Recuperar GRUB despues de eliminar linux
+
+con el instalador, nos metemos en opciones avanzadas, símbolo del sistema y escribimos:
+
+bootrec.exe/fixmbr
+bootrec.exe/fixboot
+luego reiniciamos y sacamos el disco de instalación
+
+Apagado automático:
+shutdown -s -t [time in seconds]
+1h=3600s
+1h30min=5400s
+2h=7200s
+
+para cancelarlo: shutdown -a

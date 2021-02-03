@@ -1,0 +1,119 @@
+
+Actualizar paquetes
+sudo apt-get update
+sudo apt-get upgrade
+reboot
+
+Modificar el tiempo del grub
+sudo nano /etc/default/grub
+guardar con (ctrl+O) y salimos del editor (ctrl+X)
+sudo update-grub
+reboot
+
+INSTALAR KICKTHEMOUT (install python3 and pip3 with sudo apt-get install)
+(sudo apt-get install python3-pip)
+sudo apt-get update && sudo apt-get install nmap
+git clone https://github.com/k4m4/kickthemout.git
+cd kickthemout/
+sudo -H pip3 install -r requirements.txt
+sudo python3 kickthemout.py
+
+INSTALAR FLUXION PARA HACK EVIL TWIN
+sudo apt-get update
+cd Desktop && git clone https://github.com/wi-fi-analyzer/fluxion.git
+cd fluxion
+./fluxion.sh   (esto te muestra que tienes y que no instalado, para instalar:)
+en la carpeta de fluxion:
+cd install
+./install.sh
+esto instalara todo lo que falta por instalar para poder correr el programa
+cd ..   (me devuelvo dos repositorios)
+./fluxion.sh  (se queda cargando un rato)
+
+dentro de programa: 
+1. selecciono idioma
+2. todos los canales
+3. selecciono el objetivo
+4. ataque con FakeAP
+5. enter
+5. pyrit
+6. Desautenticar a todos
+7. Luego de capturar el handshake
+    Check Handshake
+8. crear un SSL certificado
+9. Seleccionar interface web
+10. Seleccionar una normalmente las primeras con el idioma (hacer pruebas)
+11. esperar a que el usuario se autentique finalmente lo reconecta y tenemos la contraseña (LA MUESTRA EN LA CONSOLA)
+
+E: No se ha podido localizar el paquete
+Editar el archivo poniendo esto en consola:
+
+sudo nano /etc/apt/sources.list 
+allí agregar lo siguiente:
+deb http://in.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse
+deb http://in.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://in.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu bionic-security main restricted universe multiverse
+
+deb-src http://in.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://security.ubuntu.com/ubuntu bionic-security main restricted universe multiverse
+deb-src http://in.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://in.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+Para kali agregar:
+deb http://http.kali.org/kali kali-rolling main non-free contrib
+deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+
+Recuperar grub luego de instalar linux
+sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt-get update
+sudo apt-get install -y boot-repair
+boot-repair and click on Recommended repair
+
+Problemas agregando repositorios
+sudo apt install software-properties-common -y
+
+Instalar Anaconda, descargar primero el .sh
+bash ~/Downloads/Anaconda3-2020.02-Linux-x86_64.sh
+source ~/anaconda3/bin/activate root
+
+Para cambiar el nombre del equipo
+Type the following command to edit /etc/hostname using nano or vi text editor:
+- sudo nano /etc/hostname
+Delete the old name and setup new name.
+Next Edit the /etc/hosts file:
+-sudo nano /etc/hosts
+Replace any occurrence of the existing computer name with your new one.
+Reboot the system to changes take effect:
+-sudo reboot
+
+
+
+
+
+
+
+FEDORA OS
+Optimizar DNF: dnf -y install yumex dnf-plugins-core
+
+Actualizar tu Sistema: dnf -y update
+
+Instalar programas: dnf install  nombre del paquete
+			sudo rpm -i packet.rpm
+			sh packet.sh
+
+Lista los paquetes que pueden ser removidos: dnf list autoremove
+
+Actualiza los paquetes: dnf upgrade
+
+Actualiza un paquete específico: dnf upgrade  nombre del paquete
+
+Reinstala un paquete: dnf reinstall  nombre del paquete
+
+Elimina un paquete: dnf remove  nombre del paquete
+
+Modificar el tiempo del grub
+sudo nano /etc/default/grub
+guardar con (ctrl+O) y salimos del editor (ctrl+X)
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+reboot

