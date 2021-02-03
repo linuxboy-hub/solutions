@@ -1,0 +1,7 @@
+1. Crear el repositorio
+2. sudo apt install git-all
+3.  git config --global user.name "linuxboy-hub"
+    git config --global user.email "mateo.jaramillo97@hotmail.com"
+4. en VScode view/command palette escribir: git: Clone, dar enter y luego poner el enlace del repositorio
+5. Lugo instalar la extension GitHub Pull Requests en view/extensions
+6. luego en la parte inferior izquierda buscar la opcion de iniciar sesion en el github (INTENTAR TENER ABIERTO EL GITHUB EN EL NAVEGADOR QUE PUEDE REDIRIGIR PARA DAR LOS PERMISOS)
