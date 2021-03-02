@@ -87,7 +87,13 @@ Replace any occurrence of the existing computer name with your new one.
 Reboot the system to changes take effect:
 -sudo reboot
 
-
+Para poner asteriscos al meter la contraseña
+-sudo visudo
+agregar 
+	'Defaults    pwfeedback' 
+debajo de
+	'Defaults    env_reset'
+Guardar, salir y esta listo
 
 
 
